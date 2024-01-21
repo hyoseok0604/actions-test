@@ -7,4 +7,4 @@ mkdir /sys/fs/cgroup/test
 
 cd /sys/fs/cgroup/test
 
-ls
+ls -al
