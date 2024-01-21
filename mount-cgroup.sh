@@ -1,12 +1,10 @@
 #!/bin/bash
 
 # Mount cgroup v2
-if [ ! -d "/cgroup" ]; then
-  mkdir /cgroup
-fi
+echo "+memory +cpu" > /sys/fs/cgroup/cgroup.subtree_control
 
-mount -t cgroup2 none /cgroup
+mkdir /sys/fs/cgroup/test
 
-mount
+cd /sys/fs/cgroup/test
 
-ls /cgroups/memory
+ls
